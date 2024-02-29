@@ -19,11 +19,10 @@ pipeline {
 
     stages {
         stage('Build'){
-            environment {
-                JAVA_HOME = tool 'OracleJDK8'
-            }
             steps {
-                sh 'mvn -s settings.xml -DskipTest install'
+                withEnv(['JAVA_HOME=/usr/lib/jvm/']) {
+                    sh 'mvn -s settings.xml -DskipTest install'
+                }
             }
         }
     }
