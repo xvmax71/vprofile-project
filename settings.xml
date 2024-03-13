@@ -5,32 +5,32 @@
 
   <servers>
     <server>
-      <id>${SNAP-REPO}</id>
-      <username>${NEXUS-USER}</username>
-      <password>${NEXUS-PASS}</password>
+      <id>vprofile-snapshot</id>
+      <username>admin</username>
+      <password>admin123</password>
     </server>
     <server>
-      <id>${RELEASE-REPO}</id>
-      <username>${NEXUS-USER}</username>
-      <password>${NEXUS-PASS}</password>
-    </server>
-        <server>
-        <id>${CENTRAL-REPO}</id>
-      <username>${NEXUS-USER}</username>
-      <password>${NEXUS-PASS}</password>
+      <id>vprofile-release</id>
+      <username>admin</username>
+      <password>admin123</password>
     </server>
     <server>
-        <id>${NEXUS-GRP-REPO}</id>
-      <username>${NEXUS-USER}</username>
-      <password>${NEXUS-PASS}</password>
+      <id>vpro-maven-group</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+    <server>
+      <id>vpro-maven-group</id>
+      <username>admin</username>
+      <password>admin123</password>
     </server>
   </servers>
 
   <mirrors>
     <mirror>
-      <id>${CENTRAL-REPO}</id>
-      <name>${CENTRAL-REPO}</name>
-      <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
+      <id>vpro-maven-group</id>
+      <name>vpro-maven-group</name>
+      <url>http://172.31.88.145:8081/repository/vpro-maven-group/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
